@@ -1,0 +1,170 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: poppins;
+}
+
+:root {
+  --shadow-1: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-2: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.15);
+  --shadow-3: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.header {
+  height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/hero_bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  width: 600px;
+  text-align: center;
+}
+.content h2 {
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.content p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 200;
+}
+.content a {
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/*
+  Modal css Code
+*/
+.modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.8)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-60px);
+}
+.modal-container.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+
+.modal {
+  width: 500px;
+  height: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.modal-header {
+  text-align: left;
+  border-bottom: 1px solid #f9f9f9;
+  padding: 15px 20px;
+  position: relative;
+}
+.modal-header button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.modal-header button i {
+  font-size: 30px;
+}
+.modal-body {
+  padding: 15px 20px;
+}
+
+/* Alert popup */
+.anu-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.anu-alert .alert-content {
+  width: 548px;
+  background: #fff;
+  border-radius: 10px;
+}
+.anu-alert .alert-content .alert-header {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9;
+}
+.anu-alert .alert-content .alert-header .close {
+  background-color: #ccc;
+  border: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.anu-alert .alert-content .alert-body {
+  padding: 15px 20px;
+}
+
+.anu-alert .alert-content .alert-body .btns {
+  text-align: right;
+}
+.anu-alert .alert-content .alert-body .btns a {
+  display: inline-block;
+  padding: 7px 40px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.anu-alert .alert-content .alert-body .btns a:nth-child(1) {
+  color: #1e6ed8;
+}
+.anu-alert .alert-content .alert-body .btns a:nth-child(2) {
+  background-color: #1e6ed8;
+  color: #fff;
+}
